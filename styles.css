@@ -56,12 +56,7 @@ table {
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-table th, table td {
-    padding: 12px 18px;
-    text-align: left;
-    font-size: 16px;
+    table-layout: fixed; /* Makes table columns more evenly distributed */
 }
 
 /* Table Header */
@@ -71,6 +66,7 @@ table th {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 12px 18px;
 }
 
 /* Table Row */
@@ -151,40 +147,56 @@ select option {
         margin-bottom: 15px;
     }
 
-    /* Table font size */
+    /* Table adjustments for mobile */
     table {
         font-size: 14px;
+        border: none;
+        box-shadow: none;
     }
 
     table th, table td {
+        padding: 8px 12px;
+        text-align: left;
+    }
+
+    /* Table Header Font Size */
+    table th {
+        font-size: 15px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+
+    /* Card-like layout for table rows on mobile */
+    table, table thead, table tbody, table th, table td, table tr {
+        display: block;
+    }
+
+    table th {
+        text-align: center;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
         padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     /* Make the header font smaller for mobile */
     .dashboard h1 {
         font-size: 28px;
-    }
-
-    /* Stack the header and filter inputs vertically */
-    #search-input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    /* Adjust the input and select box width to 100% on mobile */
-    input[type="text"], #manufacturer-select {
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* Table adjustment for mobile - make text smaller and add more spacing */
-    table th, table td {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    table th {
-        font-size: 15px;
     }
 }
 
