@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רמי לוי מחירון</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>רמי לוי מחירים</h1>
+        <span id="total-items">פריטים: 0</span>
+        <div>
+            <input type="text" id="search-input" placeholder="חפש פריט לפי שם">
+            <select id="manufacturer-select">
+                <option value="">סנן לפי יצרן</option>
+                <!-- Manufacturer options will be dynamically populated -->
+            </select>
+            
+        </div>
+        <table id="item-table">
+            <thead>
+                <tr>
+                    <th>ברקוד</th>
+                    <th>שם פריט</th>
+                    <th>יצרן</th>
+                    <th>מחיר</th>
+                    <th>תאריך עדכון מחיר</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Items will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
